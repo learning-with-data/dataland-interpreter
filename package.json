@@ -1,0 +1,24 @@
+{
+  "name": "dataland-interpreter",
+  "version": "0.1.0",
+  "description": "Interpreter for Data Land",
+  "main": "src/interpreter.js",
+  "scripts": {
+    "pretest": "eslint src test",
+    "test": "tap test/functional.js",
+    "posttest": "tap test/functional.js --coverage --coverage-report=lcov"
+  },
+  "author": {
+    "name": "Sayamindu Dasgupta",
+    "email": "sayamindu@unc.edu"
+  },
+  "license": "BSD-3-Clause",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "tap": "^14.10.7",
+    "test-console": "^1.1.0",
+    "xml2js": "^0.4.23"
+  }
+}
