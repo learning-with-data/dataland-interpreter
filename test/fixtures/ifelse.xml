@@ -1,1 +1,78 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"><variables></variables><block type="event_onprojectstart" id="`xo?n([O9%H}@z%fwNT@" x="501" y="107"><next><block type="control_if_else" id="7x8uotV:p(_j=MnD1R9_"><value name="CONDITION"><block type="operator_equals" id="vumzn+c^MH+d}r{*S0jF"><value name="OPERAND1"><shadow type="text" id="r@3vd2]Nus=*~m0,~*i9"><field name="TEXT">42</field></shadow></value><value name="OPERAND2"><shadow type="text" id="XGnHhH$KtBFiz1gJ`vfp"><field name="TEXT">24</field></shadow></value></block></value><statement name="SUBSTACK"><block type="debug_log" id="]1^{RxX$v0|RPEi69z{["><value name="STRING"><shadow type="text" id="XNB@DqdLw4vRz_D(,u?q"><field name="TEXT">42 = 24</field></shadow></value></block></statement><statement name="SUBSTACK2"><block type="debug_log" id="cRR1nFu^Z`MBN{$Nw7!*"><value name="STRING"><shadow type="text" id=".EQ9Z?S0cc_Dt3R8QyHm"><field name="TEXT">42 != 24</field></shadow></value></block></statement><next><block type="control_if_else" id="R60S?nm}GL-lkw;QMCWN"><value name="CONDITION"><block type="operator_equals" id="`gVN/G4Vk^6UwWQg5l3y"><value name="OPERAND1"><shadow type="text" id="(5Gj(2*a*-h/E-./DYpM"><field name="TEXT">42</field></shadow></value><value name="OPERAND2"><shadow type="text" id="@TsI:_$2:A73:*,:0Q;L"><field name="TEXT">42</field></shadow></value></block></value><statement name="SUBSTACK"><block type="debug_log" id="dQk$+!ICy{}*:r,g[VWn"><value name="STRING"><shadow type="text" id="ZINSF~^6_nLBdWhBzrjM"><field name="TEXT">42 = 42</field></shadow></value></block></statement><statement name="SUBSTACK2"><block type="debug_log" id="zN?tN|=b$dmqn,nZtW]4"><value name="STRING"><shadow type="text" id="~JF02R.BI1oZ5P_HlXCV"><field name="TEXT">42 != 42</field></shadow></value></block></statement></block></next></block></next></block></xml>
+<?xml version="1.0"?>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables/>
+  <block type="event_onprojectstart" id="`xo?n([O9%H}@z%fwNT@" x="501" y="107">
+    <next>
+      <block type="control_if_else" id="7x8uotV:p(_j=MnD1R9_">
+        <value name="CONDITION">
+          <block type="operator_equals" id="vumzn+c^MH+d}r{*S0jF">
+            <value name="OPERAND1">
+              <shadow type="text" id="r@3vd2]Nus=*~m0,~*i9">
+                <field name="TEXT">42</field>
+              </shadow>
+            </value>
+            <value name="OPERAND2">
+              <shadow type="text" id="XGnHhH$KtBFiz1gJ`vfp">
+                <field name="TEXT">24</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <statement name="SUBSTACK">
+          <block type="debug_log" id="]1^{RxX$v0|RPEi69z{[">
+            <value name="STRING">
+              <shadow type="text" id="XNB@DqdLw4vRz_D(,u?q">
+                <field name="TEXT">42 = 24</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <statement name="SUBSTACK2">
+          <block type="debug_log" id="cRR1nFu^Z`MBN{$Nw7!*">
+            <value name="STRING">
+              <shadow type="text" id=".EQ9Z?S0cc_Dt3R8QyHm">
+                <field name="TEXT">42 != 24</field>
+              </shadow>
+            </value>
+          </block>
+        </statement>
+        <next>
+          <block type="control_if_else" id="R60S?nm}GL-lkw;QMCWN">
+            <value name="CONDITION">
+              <block type="operator_equals" id="`gVN/G4Vk^6UwWQg5l3y">
+                <value name="OPERAND1">
+                  <shadow type="text" id="(5Gj(2*a*-h/E-./DYpM">
+                    <field name="TEXT">42</field>
+                  </shadow>
+                </value>
+                <value name="OPERAND2">
+                  <shadow type="text" id="@TsI:_$2:A73:*,:0Q;L">
+                    <field name="TEXT">42</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+            <statement name="SUBSTACK">
+              <block type="debug_log" id="dQk$+!ICy{}*:r,g[VWn">
+                <value name="STRING">
+                  <shadow type="text" id="ZINSF~^6_nLBdWhBzrjM">
+                    <field name="TEXT">42 = 42</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+            <statement name="SUBSTACK2">
+              <block type="debug_log" id="zN?tN|=b$dmqn,nZtW]4">
+                <value name="STRING">
+                  <shadow type="text" id="~JF02R.BI1oZ5P_HlXCV">
+                    <field name="TEXT">42 != 42</field>
+                  </shadow>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
