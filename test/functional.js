@@ -236,3 +236,42 @@ testFunction(
     t.end();
   }
 );
+
+testFunction("Fields and values", "./test/fixtures/fields-and-values.xml", function (
+  t,
+  inspect
+) {
+  inspect.restore();
+  t.true((inspect.output[0] >= 10) & (inspect.output[0] <= 150));
+  t.end();
+});
+
+testFunction(
+  "Variable set/get",
+  "./test/fixtures/variable-set-get.xml",
+  function (t, inspect) {
+    inspect.restore();
+    t.same(inspect.output, ["10\n"]);
+    t.end();
+  }
+);
+
+testFunction(
+  "Variable addition",
+  "./test/fixtures/variable-add.xml",
+  function (t, inspect) {
+    inspect.restore();
+    t.same(inspect.output, ["15\n"]);
+    t.end();
+  }
+);
+
+testFunction(
+  "Block with serialized dropdown field",
+  "./test/fixtures/block-with-serialized-field-dropdown.xml",
+  function (t, inspect) {
+    inspect.restore();
+    t.same(inspect.output, ["450\n"]);
+    t.end();
+  }
+);

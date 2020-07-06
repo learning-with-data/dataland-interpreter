@@ -78,7 +78,6 @@ class Thread extends EventEmitter {
   }
 
   evalBlock(block) {
-    // console.log(block);
     if (block === undefined) {
       console.warn("Got undefined block");
       return;
@@ -99,29 +98,53 @@ class Thread extends EventEmitter {
     return blockPrim(block);
   }
 
-  getBlockArg(block, index) {
-    var blockValue = null;
-
-    if (block.value instanceof Array) {
-      blockValue = block.value[index];
-    } else {
-      if (index > 0) {
-        console.warn("Got asked for non-existent block param.");
+  getBlockArg(block, name) {
+    if (block.field !== undefined) {
+      if (block.field instanceof Array) {
+        const blockField = block.field.find((field) => field.name === name);
+        return blockField._;
+      } else if (block.field) {
+        if (block.field.name === name) {
+          return block.field._;
+        }
       }
-      blockValue = block.value;
+    }
+    
+    if (block.value !== undefined) {
+      var blockValue = null;
+
+      if (block.value instanceof Array) {
+        blockValue = block.value.find((value) => value.name === name);
+        if (blockValue === undefined) {
+          console.warn(
+            `Got unknown argument name ${name} for blocktype ${block.type}`
+          );
+          return;
+        }
+      } else {
+        if (block.value.name === name) {
+          blockValue = block.value;
+        } else {
+          console.warn(
+            `Got unknown argument name ${name} for blocktype ${block.type}`
+          );
+          return;
+        }
+      }
+      if (blockValue.block === undefined) {
+        return blockValue.shadow.field._;
+      } else {
+        return this.evalBlock(blockValue.block);
+      }
     }
 
-    if (blockValue.block === undefined) {
-      return blockValue.shadow.field._;
-    } else {
-      return this.evalBlock(blockValue.block);
-    }
+    return;
   }
 
   // Core primitives defined below
 
   primRepeat(block) {
-    var repeatCount = parseInt(this.getBlockArg(block, 0));
+    var repeatCount = parseInt(this.getBlockArg(block, "TIMES"));
     this.stack.push(this.currentStack);
     this.currentStack = undefined; // Clear out the next block
 
@@ -133,7 +156,7 @@ class Thread extends EventEmitter {
   }
 
   primIf(block) {
-    var condition = this.getBlockArg(block, 0);
+    var condition = this.getBlockArg(block, "CONDITION");
 
     if (condition) {
       this.stack.push(this.currentStack);
@@ -145,7 +168,7 @@ class Thread extends EventEmitter {
   }
 
   primIfElse(block) {
-    var condition = this.getBlockArg(block, 0);
+    var condition = this.getBlockArg(block, "CONDITION");
 
     if (condition) {
       this.stack.push(this.currentStack);

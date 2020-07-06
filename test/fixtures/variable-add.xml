@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="ifJlEyLx4BHt-mDthK-b">a</variable>
+    <variable id="m#{,fDR5$I;zlpnZ)$A*">b</variable>
+  </variables>
+  <block type="event_onprojectstart" id="tn5GVkx|aQ~+VU-qDM5b" x="242" y="24">
+    <next>
+      <block type="variables_set" id="T_!S4l_DU?@d761aJ+B,">
+        <field name="VAR" id="ifJlEyLx4BHt-mDthK-b">a</field>
+        <value name="VALUE">
+          <shadow type="text" id="CwBa*6WQ6w2[#;v[hrs1">
+            <field name="TEXT">5</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="variables_set" id="ycZPO[7dF8hZFM}GAzyg">
+            <field name="VAR" id="m#{,fDR5$I;zlpnZ)$A*">b</field>
+            <value name="VALUE">
+              <shadow type="text" id="M{VCzI*_,o1O|2(cmPFg">
+                <field name="TEXT">10</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="debug_log" id="jPss^CE69B*p#E/Ntc2*">
+                <value name="STRING">
+                  <shadow type="text" id="`3p}?Ir%yna/+w+AjO53">
+                    <field name="TEXT">Hello DataLand!</field>
+                  </shadow>
+                  <block type="operator_arithmetic" id="tLI_wAFj^*1I[_@mXoCx">
+                    <value name="A">
+                      <shadow type="math_number" id="y3KK*w(@lf|]R9|U,gYI">
+                        <field name="NUM">10</field>
+                      </shadow>
+                      <block type="variables_get" id="E,Lw4M(OuehO{f~L,PGK">
+                        <field name="VAR" id="ifJlEyLx4BHt-mDthK-b">a</field>
+                      </block>
+                    </value>
+                    <value name="OP">
+                      <shadow type="operator_arithmeticops_menu" id="u:iU?Ys8KrBL7xxF.mv:">
+                        <field name="COLUMN">add</field>
+                      </shadow>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="7VXS7qgN+a=Op^PH-YXQ">
+                        <field name="NUM">10</field>
+                      </shadow>
+                      <block type="variables_get" id="o4Q$t}.O![L,+D}eXoir">
+                        <field name="VAR" id="m#{,fDR5$I;zlpnZ)$A*">b</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
+

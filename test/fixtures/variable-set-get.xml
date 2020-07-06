@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="_:WaS=yxHUp=07hAnOmA">testvar</variable>
+  </variables>
+  <block type="event_onprojectstart" id="5zwA!9YvFWQ[N2.S]Xe4" x="143" y="39">
+    <next>
+      <block type="variables_set" id="pOYa}lJ$RJ^Zc[y(G`(+">
+        <field name="VAR" id="_:WaS=yxHUp=07hAnOmA">testvar</field>
+        <value name="VALUE">
+          <shadow type="text" id="gxLC:];:dT:gE!FKH7h8">
+            <field name="TEXT">10</field>
+          </shadow>
+        </value>
+        <next>
+          <block type="debug_log" id="pd~g~uGw#;yEVzvP]}/W">
+            <value name="STRING">
+              <shadow type="text" id="/eUFvo:m/1o9:Ui=As(+">
+                <field name="TEXT">Hello DataLand!</field>
+              </shadow>
+              <block type="variables_get" id="AdQ9*;SWCzH?fK^sX^];">
+                <field name="VAR" id="_:WaS=yxHUp=07hAnOmA">testvar</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
+

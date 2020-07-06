@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="event_onprojectstart" id="*PA:713H]/Fn*U=!JJfi" x="396" y="41">
+    <next>
+      <block type="debug_log" id="X/LzB?bL#*0Aw|zb_x[Q">
+        <value name="STRING">
+          <shadow type="text" id="C^N[y?}ahajd`B5aBSzn">
+            <field name="TEXT">Hello DataLand!</field>
+          </shadow>
+          <block type="operator_arithmetic" id="p4^ACnRw-4_=I^P*c*G4">
+            <field name="OP">add</field>
+            <value name="A">
+              <shadow type="math_number" id="C^;+D7OyS)1iq5-$J?b.">
+                <field name="NUM">150</field>
+              </shadow>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="l8!E,o*?c%?6wQ/afCeC">
+                <field name="NUM">300</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>
+

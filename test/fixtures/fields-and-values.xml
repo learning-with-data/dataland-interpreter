@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <block type="event_onprojectstart" id="s0B;7(xrb2n:29tz]R`n" x="187" y="16">
+    <next>
+      <block type="debug_log" id="!j-KrTc3_F(,-LqYuQ68">
+        <value name="STRING">
+          <shadow type="text" id="mJ9OkDl/46nx{xXUsyC[">
+            <field name="TEXT">Hello DataLand!</field>
+          </shadow>
+          <block type="operator_random" id="0Ncw1g}}F:Ie$6@;r$T=">
+            <value name="FROM">
+              <shadow type="math_number" id="Y%,n`45x_lxD474$(w#b">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+            <value name="TO">
+              <shadow type="math_number" id="+,(GyTqxplf_W!=OeC]W">
+                <field name="NUM">10</field>
+              </shadow>
+              <block type="operator_arithmetic" id="LLpH3)zy|~?W`a#H~ZpO">
+                <value name="A">
+                  <shadow type="math_number" id="7MTx@5G0Iym_.-9P}2):">
+                    <field name="NUM">100</field>
+                  </shadow>
+                </value>
+                <value name="OP">
+                  <shadow type="operator_arithmeticops_menu" id="Z{w52,f`#91p`n/-9jHy">
+                    <field name="COLUMN">add</field>
+                  </shadow>
+                </value>
+                <value name="B">
+                  <shadow type="math_number" id="msDqLHzgUTvIe^2iQ824">
+                    <field name="NUM">50</field>
+                  </shadow>
+                </value>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>
+
