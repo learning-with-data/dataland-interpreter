@@ -102,7 +102,9 @@ class Thread extends EventEmitter {
     if (block.field !== undefined) {
       if (block.field instanceof Array) {
         const blockField = block.field.find((field) => field.name === name);
-        return blockField._;
+        if (blockField !== undefined) {
+          return blockField._;
+        }
       } else if (block.field) {
         if (block.field.name === name) {
           return block.field._;
